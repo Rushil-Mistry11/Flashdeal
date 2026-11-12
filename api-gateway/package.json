@@ -1,0 +1,12 @@
+{
+  "name": "flashdeal-api-gateway",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": { "start": "node src/server.js" },
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "mongodb": "^6.8.0"
+  }
+}
