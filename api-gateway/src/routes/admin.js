@@ -5,7 +5,6 @@ const { redisKeys } = require('../services/metricKeys');
 
 const router = express.Router();
 
-// Demo helper: break / repair the catalog service to show the circuit breaker.
 router.post('/catalog-failure', async (req, res) => {
   try {
     const r = await fetch(`${config.catalogServiceUrl}/admin/failure`, {

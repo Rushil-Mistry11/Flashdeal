@@ -1,6 +1,5 @@
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// Retry with exponential backoff + jitter: waits ~base, 2*base, 4*base ...
 async function retry(fn, { retries = 3, baseMs = 100, factor = 2, onRetry } = {}) {
   let attempt = 0;
   for (;;) {

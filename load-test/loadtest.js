@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // Zero-dependency load tester (Node 18+). Fires N requests with C in flight at once.
 //   node loadtest.js --target claim --total 500 --concurrency 50
 //   node loadtest.js --target deals --total 500 --concurrency 50

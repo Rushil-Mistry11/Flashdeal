@@ -4,8 +4,6 @@ const logger = require('../utils/logger');
 
 const { capacity, refillPerSec } = config.rateLimit;
 
-// Token bucket per client IP. Bucket holds `capacity` tokens, refills at `refillPerSec`.
-// Each request costs one token; no token -> 429.
 module.exports = async function rateLimiter(req, res, next) {
   try {
     const [allowed, remaining] = await redis.tokenBucket(`ratelimit:${req.ip}`, capacity, refillPerSec);

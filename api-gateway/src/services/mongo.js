@@ -1,7 +1,6 @@
 const { MongoClient } = require('mongodb');
 const config = require('../config');
 
-// The worker does the writes; the gateway only reads (health check, counter, "my orders").
 const client = new MongoClient(config.mongoUrl, { serverSelectionTimeoutMS: 2000 });
 const db = () => client.db(config.mongoDb);
 

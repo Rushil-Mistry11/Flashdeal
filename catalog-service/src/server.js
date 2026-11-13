@@ -1,5 +1,3 @@
-// Downstream service the gateway calls: owns the product catalogue (MongoDB `deals` collection).
-// The gateway protects calls to it with a circuit breaker; /admin/failure lets you break it on demand for the demo.
 const express = require('express');
 const { MongoClient } = require('mongodb');
 

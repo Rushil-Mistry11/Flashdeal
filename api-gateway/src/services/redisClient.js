@@ -2,8 +2,7 @@ const Redis = require('ioredis');
 const config = require('../config');
 const logger = require('../utils/logger');
 
-// enableOfflineQueue=false -> commands fail fast when Redis is down instead of hanging,
-// which lets the rate limiter "fail open" and the cache degrade gracefully.
+
 const redis = new Redis(config.redisUrl, {
   maxRetriesPerRequest: 1,
   enableOfflineQueue: false,

@@ -1,4 +1,3 @@
-// Structured JSON logs: one line per event, so a request can be traced with `grep <requestId>`.
 const SERVICE = process.env.SERVICE_NAME || 'api-gateway';
 
 function log(level, msg, fields = {}) {

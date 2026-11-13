@@ -7,8 +7,6 @@ const logger = require('../utils/logger');
 
 const router = express.Router();
 
-// The gateway does NOT decide the outcome (sold out? already claimed?). It validates the request, puts it on the
-// queue and answers 202. The worker applies the business rules against MongoDB, in queue order.
 router.post('/', async (req, res) => {
   const { userId, dealId } = req.body || {};
   const userOk = typeof userId === 'string' && userId.trim().length >= 1 && userId.length <= 64;

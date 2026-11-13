@@ -8,7 +8,6 @@ let connection = null;
 let channel = null;
 let looping = false;
 
-// Keeps trying (with backoff) until RabbitMQ is reachable; re-runs automatically if the connection drops.
 async function connectLoop() {
   if (looping) return;
   looping = true;
